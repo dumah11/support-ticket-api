@@ -14,6 +14,7 @@ class TicketUpdate(BaseModel):
     status: str | None = None
     assigned_to: str | None = None
     category: str | None = None
+    priority: str | None = None
 
 
 class TicketAssign(BaseModel):
@@ -22,3 +23,13 @@ class TicketAssign(BaseModel):
 
 class TicketClose(BaseModel):
     status: str = "Closed"
+
+
+class UserCreate(BaseModel):
+    username: str
+    password: str
+
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
